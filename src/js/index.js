@@ -3,13 +3,22 @@ const $lastLi = $siteList.find('li.last')
 // 获取本地数据
 const YJData = localStorage.getItem('YJData')
 // 转化为对象
-const YJObject = JSON.parse(YJData)
+const YJObject = JSON.parse(YJData);
+let hashMap
 
 // 读取数据或初始化
-const hashMap = YJObject || [{
-    logo: '我',
-    url: 'https://github.com/Layouwen'
-}]
+if (localStorage.YJData === '[]') {
+    hashMap = [{
+        logo: '我',
+        url: 'https://github.com/Layouwen'
+    }]
+    console.log('1')
+} else {
+    hashMap = YJObject || [{
+        logo: '我',
+        url: 'https://github.com/Layouwen'
+    }]
+}
 
 // 清除前缀
 const simplifyUrl = (url) => {

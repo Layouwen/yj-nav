@@ -131,13 +131,13 @@ body {
 }
 
 @media(max-width: 500px) {
-    .site-list .site:hover>.close {
+    .site-list .site>.close {
         display: block;
     }
 }
 
 @media(min-width: 500px) {
-    .site-list .site>.close {
+    .site-list .site:hover>.close {
         display: block;
     }
 }
