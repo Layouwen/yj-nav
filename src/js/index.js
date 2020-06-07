@@ -7,14 +7,9 @@ const YJObject = JSON.parse(YJData)
 
 // 读取数据或初始化
 const hashMap = YJObject || [{
-        logo: '我',
-        url: 'https://github.com/Layouwen'
-    },
-    {
-        logo: 'G',
-        url: 'https://www.github.com'
-    }
-]
+    logo: '我',
+    url: 'https://github.com/Layouwen'
+}]
 
 // 清除前缀
 const simplifyUrl = (url) => {
@@ -41,6 +36,12 @@ const render = () => {
       </li>`).insertBefore($lastLi)
         $li.on('click', () => {
             window.open(node.url)
+        })
+        // 删除
+        $li.on('click', '.close', (e) => {
+            e.stopPropagation() // 阻止冒泡
+            hashMap.splice(index, 1)
+            render()
         })
     })
 }
@@ -69,3 +70,15 @@ window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)
     localStorage.setItem('YJData', string)
 }
+
+// 键盘快捷建
+$(document).on('keypress', (e) => {
+    const {
+        key
+    } = e
+    for (let i = 0; i < hashMap.length; i++) {
+        if (hashMap[i].logo.toLowerCase() === key) {
+            window.open(hashMap[i].url)
+        }
+    }
+})
