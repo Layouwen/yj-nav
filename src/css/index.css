@@ -48,7 +48,7 @@ body {
     padding: 0 28px;
     font-size: 16px;
     white-space: nowrap;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 4px;
     background: #0282B9;
@@ -100,7 +100,7 @@ body {
     cursor: pointer;
     border-radius: 4px;
     border: 1px solid #ddd;
-    background: white;
+    background: #fff;
 }
 
 .site-list .site>.logo {
@@ -136,6 +136,12 @@ body {
     }
 }
 
+@media(min-width: 500px) {
+    .site-list .site>.close {
+        display: block;
+    }
+}
+
 .last>.add-button {
     display: flex;
     justify-content: center;
@@ -143,8 +149,8 @@ body {
     flex-direction: column;
     padding: 20px 0;
     width: 160px;
-    border: 1px solid #DDD;
-    background: white;
+    border: 1px solid #ddd;
+    background: #fff;
 }
 
 .last .icon-wrapper {
@@ -154,5 +160,17 @@ body {
     width: 64px;
     height: 64px;
 }
+
+.add-button .icon {
+    width: 56px;
+    height: 56px;
+}
+
+.add-button .text {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
 
 /* main-end */
