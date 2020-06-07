@@ -7,8 +7,8 @@ const YJObject = JSON.parse(YJData)
 
 // 读取数据或初始化
 const hashMap = YJObject || [{
-        logo: 'B',
-        url: 'https://www.bilibili.com'
+        logo: '我',
+        url: 'https://github.com/Layouwen'
     },
     {
         logo: 'G',
@@ -30,8 +30,13 @@ const render = () => {
     hashMap.forEach((node, index) => {
         const $li = $(`<li>
         <div class="site">
-          <div class="logo">${node.logo}</div>
-          <div class="link">${simplifyUrl(node.url)}</div>
+            <div class="logo">${node.logo}</div>
+            <div class="link">${simplifyUrl(node.url)}</div>
+            <div class="close">
+                <svg class="icon">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </div>
         </div>
       </li>`).insertBefore($lastLi)
         $li.on('click', () => {

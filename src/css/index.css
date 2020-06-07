@@ -1,3 +1,11 @@
+.close .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 body {
     background: #eee;
 }
@@ -7,9 +15,23 @@ body {
     margin: 20px;
 }
 
+@media (min-width: 500px) {
+    .main-header {
+        margin: 60px 0 100px;
+    }
+}
+
 .main-search {
     display: flex;
     justify-content: space-between;
+}
+
+@media (min-width: 500px) {
+    .main-search {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .main-search>input {
@@ -37,8 +59,8 @@ body {
 /* main-start */
 .container {
     max-width: 900px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .site-list {
@@ -48,8 +70,23 @@ body {
     margin: 20px;
 }
 
+@media (min-width: 500px) {
+    .site-list {
+        margin-left: 0;
+        margin-right: -25px;
+        justify-content: flex-start;
+    }
+}
+
 .site-list>li {
     margin-bottom: 10px;
+}
+
+
+@media(min-width: 500px) {
+    .site-list>li {
+        margin-right: 25px;
+    }
 }
 
 .site-list .site {
@@ -79,6 +116,24 @@ body {
 .site-list .site>.link {
     font-size: 14px;
     margin-top: 4px;
+}
+
+.site-list .site>.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: none;
+    cursor: default;
+}
+
+.site-list .site:hover>.close {
+    display: block;
+}
+
+@media(max-width: 500px) {
+    .site-list .site:hover>.close {
+        display: block;
+    }
 }
 
 .last>.add-button {
