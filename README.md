@@ -2,7 +2,7 @@
 
 ## 查看效果
 
-[点击预览](https://layouwen.github.io/YJ-nav/src/index.html)
+[点击预览](http://layouwen.gitee.io/yj-nav/src/index)
 
 ## 介绍
 
