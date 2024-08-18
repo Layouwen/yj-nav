@@ -1,13 +1,24 @@
-# YJ-nav 艺简导航
+# YJ Nav
 
-## 查看效果
+English | [中文](./README.md)
 
-[点击预览](http://layouwen.gitee.io/yj-nav/src/index)
+![preview](./images/preview.png)
 
-## 介绍
+## Preview
 
-## 联系方式
+[https://layouwen.github.io/yj-nav/src](https://layouwen.github.io/yj-nav/src)
 
-> 作者：梁又文  
-> QQ：794234293  
-> 微信：gdgzyw
+## Introduction
+
+YJ Navigation is a simple navigation page built with jQuery. It is suitable for jQuery beginners to reference and learn related usage.
+
+## Features
+
+- Supports both PC and mobile browsing
+- Supports Baidu search
+- Allows customization of navigation links
+- Stores data locally
+
+## Contact Me
+
+[Github](https://github.com/layouwen)
